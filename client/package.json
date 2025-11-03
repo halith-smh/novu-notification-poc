@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@novu/notification-center": "^0.24.0",
+    "@novu/react": "^2.0.1",
+    "axios": "^1.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "axios": "^1.6.0",
     "react-scripts": "5.0.1"
   },
   "scripts": {
@@ -32,5 +32,8 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:5000"
+  "proxy": "http://localhost:5000",
+  "devDependencies": {
+    "@babel/helper-define-polyfill-provider": "^0.6.5"
+  }
 }

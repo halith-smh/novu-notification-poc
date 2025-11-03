@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { taskAPI, novuAPI } from '../services/api';
-import { NovuProvider, PopoverNotificationCenter } from '@novu/notification-center';
+import { NovuProvider, Inbox } from '@novu/react';
 import TaskList from './TaskList';
 import './Dashboard.css';
 
@@ -80,16 +80,7 @@ const Dashboard = ({ user, onLogout }) => {
               backendUrl="http://localhost:3000"
               socketUrl="ws://localhost:3002"
             >
-              <PopoverNotificationCenter colorScheme="light">
-                {({ unseenCount }) => (
-                  <button className="notification-bell">
-                    🔔
-                    {unseenCount > 0 && (
-                      <span className="notification-badge">{unseenCount}</span>
-                    )}
-                  </button>
-                )}
-              </PopoverNotificationCenter>
+              <Inbox />
             </NovuProvider>
           ) : (
             <div className="notification-placeholder" title="Configure NOVU_APP_ID in .env">
