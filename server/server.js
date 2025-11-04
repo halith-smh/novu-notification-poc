@@ -228,6 +228,7 @@ app.get('/api/tasks/:taskId', authenticateToken, (req, res) => {
 // Update task status
 app.patch('/api/tasks/:taskId/status', authenticateToken, async (req, res) => {
   const { taskId } = req.params;
+
   const { status } = req.body;
 
   if (!['pending', 'in-progress', 'completed'].includes(status)) {
@@ -283,6 +284,35 @@ app.patch('/api/tasks/:taskId/status', authenticateToken, async (req, res) => {
     message: status === 'completed' ? 'Task completed and notification sent to admin' : 'Task status updated'
   });
 });
+
+// Test end point
+app.get('/api/test-workflow', async (req, res) => {
+  // const {task} = req.body;
+
+  const adminUser = MOCK_USERS.admin;
+
+
+  try {
+    await novu.trigger('task-completed-notification', {
+      to: {
+        subscriberId: adminUser.subscriberId,
+        email: adminUser.email
+      },
+      payload: {
+        // taskId: task.id,
+        // taskTitle: task.title,
+        // taskDescription: task.description,
+        // userName: task.username,
+        // userId: 'User Id',
+        // completedAt: task.updatedAt,
+        message: `Test User has completed task: Ashok`
+      }
+    });
+    res.status(200).send("Hello from ashok");
+  } catch (error) {
+    res.status(500).send("Error in Notifications");
+  }
+})
 
 // ==================== HEALTH CHECK ====================
 
