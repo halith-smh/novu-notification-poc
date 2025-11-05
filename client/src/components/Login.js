@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { authAPI } from '../services/api';
 import './Login.css';
 
 const Login = ({ onLoginSuccess }) => {
+  const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -115,6 +117,14 @@ const Login = ({ onLoginSuccess }) => {
           <p>Admin: admin / admin123</p>
           <p>Users: user1, user2, user3 / user123</p>
         </div>
+
+        <button
+          onClick={() => navigate('/docs')}
+          className="docs-link-button"
+          type="button"
+        >
+          📚 View Documentation
+        </button>
       </div>
     </div>
   );

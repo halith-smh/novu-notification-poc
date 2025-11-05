@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { taskAPI, novuAPI } from '../services/api';
 import { NovuProvider, Inbox } from '@novu/react';
 import TaskList from './TaskList';
 import './Dashboard.css';
 
 const Dashboard = ({ user, onLogout }) => {
+  const navigate = useNavigate();
   const [tasks, setTasks] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
@@ -87,6 +89,10 @@ const Dashboard = ({ user, onLogout }) => {
               🔔
             </div>
           )}
+
+          <button onClick={() => navigate('/docs')} className="docs-button">
+            📚 Docs
+          </button>
 
           <button onClick={handleLogout} className="logout-button">
             Logout

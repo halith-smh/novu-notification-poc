@@ -1,0 +1,369 @@
+.docs-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+.docs-header {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.back-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.docs-header h1 {
+  color: #1f2937;
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+
+.docs-subtitle {
+  color: #6b7280;
+  font-size: 16px;
+}
+
+.docs-content {
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.docs-section {
+  margin-bottom: 50px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.docs-section:last-child {
+  border-bottom: none;
+}
+
+.docs-section h2 {
+  color: #1f2937;
+  font-size: 28px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #667eea;
+}
+
+.docs-section h3 {
+  color: #374151;
+  font-size: 22px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.docs-section h4 {
+  color: #4b5563;
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.docs-section p {
+  color: #6b7280;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+.docs-section ul,
+.docs-section ol {
+  color: #6b7280;
+  line-height: 1.8;
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.docs-section li {
+  margin-bottom: 8px;
+}
+
+.toc {
+  list-style: none;
+  margin-left: 0;
+}
+
+.toc li {
+  margin-bottom: 10px;
+}
+
+.toc a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.toc a:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+.tech-stack {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.tech-card {
+  background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.tech-card h4 {
+  color: #667eea;
+  margin-top: 0;
+}
+
+.tech-card ul {
+  margin-left: 15px;
+}
+
+.code-block {
+  background: #1f2937;
+  color: #e5e7eb;
+  padding: 20px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 15px 0;
+}
+
+.code-block code {
+  color: #10b981;
+}
+
+.api-endpoint {
+  background: #f9fafb;
+  border-left: 4px solid #667eea;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+}
+
+.api-endpoint code {
+  background: #e5e7eb;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+}
+
+.api-method {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 12px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.api-method.get {
+  background: #10b981;
+  color: white;
+}
+
+.api-method.post {
+  background: #3b82f6;
+  color: white;
+}
+
+.api-method.patch {
+  background: #f59e0b;
+  color: white;
+}
+
+.api-method.delete {
+  background: #ef4444;
+  color: white;
+}
+
+.workflow-card {
+  background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 25px;
+  margin: 20px 0;
+}
+
+.workflow-card h4 {
+  color: #667eea;
+  margin-top: 0;
+}
+
+.component-card {
+  background: #f9fafb;
+  border-left: 4px solid #764ba2;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+}
+
+.component-card h4 {
+  color: #764ba2;
+  margin-top: 0;
+}
+
+.test-scenario {
+  background: linear-gradient(135deg, #e0f2fe 0%, #dbeafe 100%);
+  border-left: 4px solid #3b82f6;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+}
+
+.test-scenario h4 {
+  color: #1e40af;
+  margin-top: 0;
+}
+
+.docs-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.docs-table thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.docs-table th,
+.docs-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.docs-table th {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+.docs-table tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+.docs-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.mermaid {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  margin: 30px 0;
+  border: 2px solid #e5e7eb;
+  overflow-x: auto;
+}
+
+.docs-footer {
+  text-align: center;
+  padding: 30px;
+  background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+  border-radius: 12px;
+  margin-top: 50px;
+}
+
+.docs-footer p {
+  margin: 10px 0;
+  color: #6b7280;
+}
+
+.docs-footer a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.docs-footer a:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .docs-content {
+    padding: 20px;
+  }
+
+  .docs-header {
+    padding: 20px;
+  }
+
+  .back-button {
+    position: static;
+    margin-bottom: 20px;
+    display: block;
+    width: fit-content;
+  }
+
+  .docs-header h1 {
+    font-size: 24px;
+    margin-top: 0;
+  }
+
+  .tech-stack {
+    grid-template-columns: 1fr;
+  }
+
+  .code-block {
+    font-size: 12px;
+    padding: 15px;
+  }
+
+  .docs-section h2 {
+    font-size: 24px;
+  }
+
+  .docs-section h3 {
+    font-size: 20px;
+  }
+
+  .docs-table {
+    font-size: 13px;
+  }
+
+  .docs-table th,
+  .docs-table td {
+    padding: 8px 10px;
+  }
+}
